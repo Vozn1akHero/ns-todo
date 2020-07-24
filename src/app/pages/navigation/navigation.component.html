@@ -1,0 +1,28 @@
+<FlexboxLayout flexDirection="column">
+  <GridLayout rows="auto,auto" class="nav">
+    <ns-navigation-button
+      row="0"
+      [marginTop]="100"
+      [marginBottom]="50"
+      text="Utwórz"
+      route="/create"
+    ></ns-navigation-button>
+    <StackLayout orientation="vertical" row="1">
+      <ns-navigation-button
+        [marginBottom]="5"
+        text="Wyszczególnione"
+        route="/important"
+      ></ns-navigation-button>
+      <ns-navigation-button
+        text="Przeglądaj"
+        route="/todos"
+      ></ns-navigation-button>
+    </StackLayout>
+    <!-- <Label row="2" class="line"></Label>
+    <ns-navigation-button
+      row="3"
+      text="Ustawienia"
+      route="/settings"
+    ></ns-navigation-button> -->
+  </GridLayout>
+</FlexboxLayout>

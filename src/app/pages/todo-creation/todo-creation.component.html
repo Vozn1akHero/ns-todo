@@ -1,0 +1,17 @@
+<ActionBar title="Utwórz todo">
+  <NavigationButton
+    icon="res://ic_arrow_back_black_24dp"
+    (tap)="goBack()"
+  ></NavigationButton>
+</ActionBar>
+<FlexboxLayout flexDirection="column" [formGroup]="newTodoForm">
+  <TextField hint="Wprowadź tytuł" formControlName="title" secure="false">
+  </TextField>
+  <ns-date-input formControlName="date"></ns-date-input>
+  <Button
+    [disabled]="!newTodoForm.valid"
+    marginTop="5"
+    (tap)="submitNewTodo()"
+    text="Dodaj"
+  ></Button>
+</FlexboxLayout>

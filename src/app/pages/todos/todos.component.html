@@ -1,0 +1,19 @@
+<ActionBar title="Wszystkie todo">
+  <NavigationButton
+    icon="res://ic_arrow_back_black_24dp"
+    (tap)="goBack()"
+  ></NavigationButton>
+</ActionBar>
+<ListView [items]="todos$ | async" class="todos">
+  <ng-template let-todo="item">
+    <ns-todo
+      [id]="todo.id"
+      [title]="todo.title"
+      [date]="todo.date"
+      [done]="todo.done"
+      (EERemoveToDoById)="deleteTodoById($event)"
+      (EEChangeTodoStatusById)="changeTodoStatusById($event)"
+      (EEEditToDoById)="editTodoById($event)"
+    ></ns-todo>
+  </ng-template>
+</ListView>

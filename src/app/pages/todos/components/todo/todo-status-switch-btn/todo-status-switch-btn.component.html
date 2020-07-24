@@ -1,0 +1,9 @@
+<StackLayout
+  [backgroundColor]="done ? '#dbdbdb' : 'transparent'"
+  [height]="height"
+  [width]="width"
+  class="change-todo-status-btn"
+  (ontap)="changeStatusOff()"
+>
+  <Image class="img" src="~/app/images/check.png" loadMode="async"></Image>
+</StackLayout>

@@ -1,0 +1,33 @@
+.nav {
+  background: rgb(19, 0, 36);
+  background: linear-gradient(
+    20deg,
+    rgb(142, 111, 219) 5%,
+    rgb(110, 73, 204) 25%,
+    rgb(18, 149, 255) 100%
+  );
+
+  .line {
+    //font-size: 19;
+    //padding: 5 18;
+    border-color: black;
+    opacity: 0.1;
+    border-width: 0 0 2 0;
+    margin-left: 15;
+    margin-right: 15;
+    margin-top: 10;
+    margin-bottom: 10;
+  }
+
+  .add-todo-btn {
+  }
+
+  &__link-btn {
+    background: transparent;
+    border: none;
+    outline: none;
+    &__span {
+      color: white;
+    }
+  }
+}

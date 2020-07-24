@@ -1,0 +1,42 @@
+<FlexboxLayout alignItems="center" justifyContent="space-between" class="todo">
+  <ns-todo-status-switch-btn
+    [done]="done"
+    [height]="50"
+    [width]="50"
+    (EEChangeStatus)="changeTodoStatusOff()"
+  ></ns-todo-status-switch-btn>
+  <!-- <TextView
+    editable="false"
+    textWrap="true"
+    class="title"
+    [text]="title"
+  ></TextView> -->
+  <!-- <editable (update)="updateTitle()">
+    <ng-template viewMode
+      ><TextView
+        editable="false"
+        textWrap="true"
+        class="title"
+        [text]="title"
+      ></TextView
+    ></ng-template>
+    <ng-template editMode>
+      <TextView
+        editable="false"
+        textWrap="true"
+        class="title"
+        [text]="title"
+        [formControlName]="title"
+      >
+      </TextView>
+    </ng-template>
+  </editable> -->
+  <WrapLayout>
+    <StackLayout class="btn" (tap)="removeTodo()">
+      <Image class="img" src="~/app/images/trash.png" loadMode="async"></Image>
+    </StackLayout>
+    <!-- <StackLayout class="btn" (tap)="editTodo()">
+      <Image class="img" src="~/app/images/pencil.png" loadMode="async"></Image>
+    </StackLayout> -->
+  </WrapLayout>
+</FlexboxLayout>

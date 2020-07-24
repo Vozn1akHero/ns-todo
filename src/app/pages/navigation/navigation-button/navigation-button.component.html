@@ -1,0 +1,16 @@
+<StackLayout
+  class="navigation-button"
+  pageTransition="slideRight"
+  [style]="{ marginBottom: this.marginBottom, marginTop: this.marginTop }"
+  (ontap)="onTap()"
+>
+  <Label
+    [text]="text"
+    textWrap="false"
+    horizontalAlignment="center"
+    verticalAlignment="center"
+  ></Label>
+  <ng-container *ngIf="imgSrc">
+    <Image [src]="imgSrc" stretch="none"></Image>
+  </ng-container>
+</StackLayout>

@@ -1,0 +1,17 @@
+<ns-modal id="bluetooth-modal">
+  <FlexboxLayout flexDirection="column">
+    <ng-container *ngIf="enabled$ | async">
+      <ListView [items]="foundDevices$ | async">
+        <ng-template let-item="item">
+          <ns-bluetooth-modal-item
+            [name]="item.name"
+            [UUID]="item.UUID"
+          ></ns-bluetooth-modal-item>
+        </ng-template>
+      </ListView>
+    </ng-container>
+    <ng-template #notEnabled>
+      <TextView text="Włącz Bluetooth"> </TextView>
+    </ng-template>
+  </FlexboxLayout>
+</ns-modal>
