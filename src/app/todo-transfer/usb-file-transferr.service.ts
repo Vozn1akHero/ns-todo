@@ -16,6 +16,13 @@ export class UsbFileTransferService {
 
     constructor(private todoStore: TodoStore) {}
 
+    manageConnection() {
+        // const broadcastReceiver = new android.content.BroadcastReceiver({
+        //     onReceive: function(context: android.content.Context, intent: android.content.Intent){
+        //     }
+        // });
+    }
+
     // manageConnection() {
     //     if (isAndroid) {
     //         let targetFolder = null;

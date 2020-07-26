@@ -1,4 +1,4 @@
-import { UsbFileTransferService } from "./../../usb-file-transfer/usb-file-transferr.service";
+import { UsbFileTransferService } from "../../todo-transfer/usb-file-transferr.service";
 import { Component, OnInit } from "@angular/core";
 import { RouterExtensions } from "@nativescript/angular";
 
